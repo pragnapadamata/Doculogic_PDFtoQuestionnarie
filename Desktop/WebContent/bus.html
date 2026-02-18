@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Booking - Top Destinations</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(45deg, #FF6B6B, #FF8E53);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .booking-form {
+            padding: 40px;
+        }
+        .form-row {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        .form-group {
+            flex: 1;
+            min-width: 250px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        .form-group input:focus, .form-group select:focus {
+            outline: none;
+            border-color: #FF6B6B;
+        }
+        .search-btn {
+            background: linear-gradient(45deg, #FF6B6B, #FF8E53);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: transform 0.3s;
+            display: block;
+            margin: 30px auto;
+        }
+        .search-btn:hover {
+            transform: translateY(-2px);
+        }
+        .bus-routes {
+            padding: 40px;
+            background: #f8f9fa;
+        }
+        .bus-routes h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+        .route-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .route-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .route-card:hover {
+            transform: translateY(-5px);
+        }
+        .route-card h3 {
+            color: #FF6B6B;
+            margin-bottom: 10px;
+        }
+        .route-card .price {
+            font-size: 24px;
+            color: #4CAF50;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .amenities {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }
+        .amenity {
+            background: #e3f2fd;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            color: #1976d2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fa fa-bus"></i> Bus Booking</h1>
+            <p>Comfortable and affordable bus travel</p>
+        </div>
+
+        <div class="booking-form">
+            <form>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="from">From</label>
+                        <input type="text" id="from" placeholder="Departure city" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="to">To</label>
+                        <input type="text" id="to" placeholder="Arrival city" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="departure">Departure Date</label>
+                        <input type="date" id="departure" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="passengers">Passengers</label>
+                        <select id="passengers">
+                            <option value="1">1 Passenger</option>
+                            <option value="2">2 Passengers</option>
+                            <option value="3">3 Passengers</option>
+                            <option value="4">4 Passengers</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="bustype">Bus Type</label>
+                        <select id="bustype">
+                            <option value="all">All Types</option>
+                            <option value="ac">AC Bus</option>
+                            <option value="nonac">Non-AC Bus</option>
+                            <option value="sleeper">Sleeper Bus</option>
+                            <option value="volvo">Volvo Bus</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="search-btn">
+                    <i class="fa fa-search"></i> Search Buses
+                </button>
+            </form>
+        </div>
+
+        <div class="bus-routes">
+            <h2>Popular Routes</h2>
+            <div class="route-grid">
+                <div class="route-card">
+                    <h3><i class="fa fa-bus"></i> Delhi → Jaipur</h3>
+                    <p>Volvo AC Sleeper</p>
+                    <div class="amenities">
+                        <span class="amenity">WiFi</span>
+                        <span class="amenity">AC</span>
+                        <span class="amenity">Sleeper</span>
+                    </div>
+                    <div class="price">₹899</div>
+                </div>
+                <div class="route-card">
+                    <h3><i class="fa fa-bus"></i> Mumbai → Pune</h3>
+                    <p>Express AC Bus</p>
+                    <div class="amenities">
+                        <span class="amenity">WiFi</span>
+                        <span class="amenity">AC</span>
+                        <span class="amenity">Reclining Seats</span>
+                    </div>
+                    <div class="price">₹699</div>
+                </div>
+                <div class="route-card">
+                    <h3><i class="fa fa-bus"></i> Bangalore → Chennai</h3>
+                    <p>Volvo Multi-Axle</p>
+                    <div class="amenities">
+                        <span class="amenity">WiFi</span>
+                        <span class="amenity">AC</span>
+                        <span class="amenity">Entertainment</span>
+                    </div>
+                    <div class="price">₹1,299</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

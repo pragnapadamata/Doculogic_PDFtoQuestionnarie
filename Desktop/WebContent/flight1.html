@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Booking - Top Destinations</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(45deg, #2196F3, #21CBF3);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .booking-form {
+            padding: 40px;
+        }
+        .form-row {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        .form-group {
+            flex: 1;
+            min-width: 250px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        .form-group input:focus, .form-group select:focus {
+            outline: none;
+            border-color: #2196F3;
+        }
+        .trip-type {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .trip-type label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .trip-type input[type="radio"] {
+            margin-right: 8px;
+        }
+        .search-btn {
+            background: linear-gradient(45deg, #4CAF50, #45a049);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: transform 0.3s;
+            display: block;
+            margin: 30px auto;
+        }
+        .search-btn:hover {
+            transform: translateY(-2px);
+        }
+        .popular-routes {
+            padding: 40px;
+            background: #f8f9fa;
+        }
+        .popular-routes h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+        .route-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .route-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .route-card:hover {
+            transform: translateY(-5px);
+        }
+        .route-card h3 {
+            color: #2196F3;
+            margin-bottom: 10px;
+        }
+        .route-card .price {
+            font-size: 24px;
+            color: #4CAF50;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fa fa-plane"></i> Flight Booking</h1>
+            <p>Find the best flights to your dream destination</p>
+        </div>
+
+        <div class="booking-form">
+            <div class="trip-type">
+                <label>
+                    <input type="radio" name="trip" value="oneway" checked>
+                    One Way
+                </label>
+                <label>
+                    <input type="radio" name="trip" value="roundtrip">
+                    Round Trip
+                </label>
+                <label>
+                    <input type="radio" name="trip" value="multicity">
+                    Multi City
+                </label>
+            </div>
+
+            <form>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="from">From</label>
+                        <input type="text" id="from" placeholder="Departure city" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="to">To</label>
+                        <input type="text" id="to" placeholder="Arrival city" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="departure">Departure Date</label>
+                        <input type="date" id="departure" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="return">Return Date</label>
+                        <input type="date" id="return">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="passengers">Passengers</label>
+                        <select id="passengers">
+                            <option value="1">1 Adult</option>
+                            <option value="2">2 Adults</option>
+                            <option value="3">3 Adults</option>
+                            <option value="4">4 Adults</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="class">Class</label>
+                        <select id="class">
+                            <option value="economy">Economy</option>
+                            <option value="business">Business</option>
+                            <option value="first">First Class</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="search-btn">
+                    <i class="fa fa-search"></i> Search Flights
+                </button>
+            </form>
+        </div>
+
+        <div class="popular-routes">
+            <h2>Popular Routes</h2>
+            <div class="route-grid">
+                <div class="route-card">
+                    <h3><i class="fa fa-plane"></i> Delhi → Mumbai</h3>
+                    <p>Non-stop flights available</p>
+                    <div class="price">₹4,999</div>
+                </div>
+                <div class="route-card">
+                    <h3><i class="fa fa-plane"></i> Bangalore → Delhi</h3>
+                    <p>Daily flights available</p>
+                    <div class="price">₹5,299</div>
+                </div>
+                <div class="route-card">
+                    <h3><i class="fa fa-plane"></i> Mumbai → Goa</h3>
+                    <p>Weekend special flights</p>
+                    <div class="price">₹3,999</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

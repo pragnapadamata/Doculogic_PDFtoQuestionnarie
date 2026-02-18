@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Success - Top Destinations</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+            text-align: center;
+        }
+        .success-icon {
+            background: linear-gradient(45deg, #4CAF50, #45a049);
+            padding: 40px;
+            color: white;
+        }
+        .success-icon i {
+            font-size: 4em;
+            animation: bounce 1s infinite;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+        .success-content {
+            padding: 40px;
+        }
+        .success-content h1 {
+            color: #4CAF50;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .success-content p {
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        .booking-details {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+        .booking-details h3 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        .detail-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .detail-item:last-child {
+            border-bottom: none;
+        }
+        .detail-label {
+            color: #666;
+        }
+        .detail-value {
+            color: #333;
+            font-weight: bold;
+        }
+        .reference-number {
+            background: #e8f5e8;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        .reference-number h4 {
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+        .reference-number p {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #333;
+        }
+        .action-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: transform 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn-primary {
+            background: linear-gradient(45deg, #4CAF50, #45a049);
+            color: white;
+        }
+        .btn-secondary {
+            background: #f8f9fa;
+            color: #333;
+            border: 2px solid #ddd;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+        .contact-info {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+        .contact-info h4 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 10px;
+            color: #666;
+        }
+        .contact-item i {
+            color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="success-icon">
+            <i class="fa fa-check-circle"></i>
+        </div>
+
+        <div class="success-content">
+            <h1>Payment Successful!</h1>
+            <p>Your booking has been confirmed and payment has been processed successfully.</p>
+
+            <div class="reference-number">
+                <h4>Booking Reference Number</h4>
+                <p>TD202412250001</p>
+            </div>
+
+            <div class="booking-details">
+                <h3>Booking Details</h3>
+                <div class="detail-item">
+                    <span class="detail-label">Service Type:</span>
+                    <span class="detail-value">Flight Booking</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Route:</span>
+                    <span class="detail-value">Delhi → Mumbai</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Travel Date:</span>
+                    <span class="detail-value">25 Dec 2024</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Passengers:</span>
+                    <span class="detail-value">2 Adults</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Class:</span>
+                    <span class="detail-value">Economy</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Amount Paid:</span>
+                    <span class="detail-value">₹11,000</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Payment Method:</span>
+                    <span class="detail-value">Credit Card</span>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <a href="index.html" class="btn btn-primary">
+                    <i class="fa fa-home"></i> Back to Home
+                </a>
+                <a href="#" class="btn btn-secondary" onclick="window.print()">
+                    <i class="fa fa-print"></i> Print Receipt
+                </a>
+            </div>
+
+            <div class="contact-info">
+                <h4>Need Help?</h4>
+                <div class="contact-item">
+                    <i class="fa fa-phone"></i>
+                    <span>+91 98765 43210</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fa fa-envelope"></i>
+                    <span>support@topdestinations.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fa fa-clock"></i>
+                    <span>24/7 Customer Support</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

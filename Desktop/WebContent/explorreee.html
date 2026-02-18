@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Destinations - Explore</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+          margin: 0;
+          padding: 0;
+          font-family: "Vollkorn", serif;
+          list-style-type: none;
+          text-decoration: none;
+          box-sizing: border-box;
+          outline: none;
+        }
+        html {
+          font-size: 62.5%;
+        }
+        :root {
+          --primary-color: #2b81e4;
+          --secondary-color: #eee;
+          --white-color: #fff;
+          --grey-color: #555;
+          --light-grey-color: #777;
+        }
+        .center {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .container {
+          background-color: var(--secondary-color);
+          margin: 3.5rem;
+          box-shadow: 0 1rem 3rem var(--grey-color);
+          overflow: hidden;
+        }
+        .navbar {
+          background-color: var(--white-color);
+          padding: 1rem;
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+        }
+        .navbar-content {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        .logo {
+          font-size: 2rem;
+          font-weight: bold;
+          color: var(--primary-color);
+        }
+        .nav-links {
+          display: flex;
+          gap: 2rem;
+        }
+        .nav-links a {
+          color: var(--grey-color);
+          font-size: 1.5rem;
+          transition: color 0.3s;
+        }
+        .nav-links a:hover {
+          color: var(--primary-color);
+        }
+        .hero {
+          height: 60rem;
+          background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('header-bg.jpg');
+          background-size: cover;
+          background-position: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          color: var(--white-color);
+        }
+        .hero-content h1 {
+          font-size: 5rem;
+          margin-bottom: 1rem;
+        }
+        .hero-content p {
+          font-size: 2rem;
+          margin-bottom: 2rem;
+        }
+        .btn {
+          padding: 1rem 2rem;
+          background-color: var(--primary-color);
+          color: var(--white-color);
+          border: none;
+          border-radius: 0.5rem;
+          font-size: 1.5rem;
+          cursor: pointer;
+          transition: background-color 0.3s;
+        }
+        .btn:hover {
+          background-color: #1a5cb8;
+        }
+        .destinations {
+          padding: 5rem 0;
+        }
+        .section-title {
+          text-align: center;
+          font-size: 3rem;
+          margin-bottom: 3rem;
+          color: var(--grey-color);
+        }
+        .destination-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+          gap: 2rem;
+          padding: 0 3.5rem;
+        }
+        .destination-card {
+          background-color: var(--white-color);
+          border-radius: 1rem;
+          overflow: hidden;
+          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s;
+        }
+        .destination-card:hover {
+          transform: translateY(-1rem);
+        }
+        .destination-card img {
+          width: 100%;
+          height: 20rem;
+          object-fit: cover;
+        }
+        .destination-info {
+          padding: 1.5rem;
+        }
+        .destination-info h3 {
+          font-size: 2rem;
+          margin-bottom: 1rem;
+          color: var(--grey-color);
+        }
+        .destination-info p {
+          font-size: 1.5rem;
+          color: var(--light-grey-color);
+          margin-bottom: 1.5rem;
+        }
+        .price {
+          font-size: 2rem;
+          color: var(--primary-color);
+          font-weight: bold;
+        }
+        .footer {
+          background-color: var(--grey-color);
+          color: var(--white-color);
+          padding: 3rem 0;
+          text-align: center;
+        }
+        .footer-content {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+          gap: 2rem;
+          padding: 0 3.5rem;
+          margin-bottom: 2rem;
+        }
+        .footer-section h3 {
+          font-size: 2rem;
+          margin-bottom: 1rem;
+        }
+        .footer-section p, .footer-section a {
+          font-size: 1.5rem;
+          color: var(--secondary-color);
+          margin-bottom: 0.5rem;
+        }
+        .footer-bottom {
+          text-align: center;
+          padding-top: 2rem;
+          border-top: 1px solid var(--light-grey-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="navbar-content">
+                <div class="logo">Top Destinations</div>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="#destinations">Destinations</a>
+                    <a href="package.html">Packages</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+        </nav>
+
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Discover Amazing Places</h1>
+                <p>Explore the world's most beautiful destinations</p>
+                <button class="btn">Start Exploring</button>
+            </div>
+        </section>
+
+        <section class="destinations" id="destinations">
+            <h2 class="section-title">Popular Destinations</h2>
+            <div class="destination-grid">
+                <div class="destination-card">
+                    <img src="rajasthan.jpg" alt="Rajasthan">
+                    <div class="destination-info">
+                        <h3>Rajasthan</h3>
+                        <p>Experience the royal heritage of Rajasthan</p>
+                        <div class="price">₹25,999</div>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <img src="kerala.jpg" alt="Kerala">
+                    <div class="destination-info">
+                        <h3>Kerala</h3>
+                        <p>God's own country with backwaters</p>
+                        <div class="price">₹22,999</div>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <img src="goa.jpg" alt="Goa">
+                    <div class="destination-info">
+                        <h3>Goa</h3>
+                        <p>Beaches, parties, and Portuguese heritage</p>
+                        <div class="price">₹18,999</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <p>Your trusted travel partner for amazing journeys</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="index.html">Home</a><br>
+                    <a href="package.html">Packages</a><br>
+                    <a href="faq.html">FAQ</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Email: info@topdestinations.com</p>
+                    <p>Phone: +91 98765 43210</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Top Destinations. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holiday Packages - Top Destinations</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(45deg, #9C27B0, #E91E63);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .packages {
+            padding: 40px;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 30px;
+            color: #333;
+        }
+        .package-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        .package-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .package-card:hover {
+            transform: translateY(-10px);
+        }
+        .package-image {
+            height: 200px;
+            background: linear-gradient(45deg, #9C27B0, #E91E63);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3em;
+        }
+        .package-content {
+            padding: 25px;
+        }
+        .package-title {
+            font-size: 1.8em;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        .package-duration {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+        .package-features {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+        .package-features li {
+            padding: 8px 0;
+            color: #555;
+            display: flex;
+            align-items: center;
+        }
+        .package-features li:before {
+            content: "✓";
+            color: #4CAF50;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .package-price {
+            font-size: 2em;
+            color: #E91E63;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .package-price span {
+            font-size: 0.6em;
+            color: #666;
+            font-weight: normal;
+        }
+        .book-btn {
+            background: linear-gradient(45deg, #9C27B0, #E91E63);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: transform 0.3s;
+            width: 100%;
+        }
+        .book-btn:hover {
+            transform: scale(1.05);
+        }
+        .filter-section {
+            padding: 20px 40px;
+            background: #f8f9fa;
+        }
+        .filter-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .filter-btn {
+            padding: 10px 20px;
+            border: 2px solid #ddd;
+            background: white;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .filter-btn.active {
+            background: linear-gradient(45deg, #9C27B0, #E91E63);
+            color: white;
+            border-color: #E91E63;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fa fa-gift"></i> Holiday Packages</h1>
+            <p>Amazing travel packages for your perfect vacation</p>
+        </div>
+
+        <div class="filter-section">
+            <div class="filter-buttons">
+                <button class="filter-btn active">All Packages</button>
+                <button class="filter-btn">Domestic</button>
+                <button class="filter-btn">International</button>
+                <button class="filter-btn">Adventure</button>
+                <button class="filter-btn">Romantic</button>
+                <button class="filter-btn">Family</button>
+            </div>
+        </div>
+
+        <div class="packages">
+            <h2 class="section-title">Featured Packages</h2>
+            <div class="package-grid">
+                <div class="package-card">
+                    <div class="package-image">
+                        <i class="fa fa-umbrella-beach"></i>
+                    </div>
+                    <div class="package-content">
+                        <h3 class="package-title">Goa Beach Paradise</h3>
+                        <p class="package-duration">3 Days / 2 Nights</p>
+                        <ul class="package-features">
+                            <li>Beach side resort accommodation</li>
+                            <li>Daily breakfast & dinner</li>
+                            <li>Water sports activities</li>
+                            <li>Sightseeing tour</li>
+                            <li>Airport transfers</li>
+                        </ul>
+                        <div class="package-price">
+                            ₹12,999 <span>per person</span>
+                        </div>
+                        <button class="book-btn">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="package-card">
+                    <div class="package-image">
+                        <i class="fa fa-mountain"></i>
+                    </div>
+                    <div class="package-content">
+                        <h3 class="package-title">Himalayan Adventure</h3>
+                        <p class="package-duration">5 Days / 4 Nights</p>
+                        <ul class="package-features">
+                            <li>Mountain resort stay</li>
+                            <li>All meals included</li>
+                            <li>Trekking & camping</li>
+                            <li>Bonfire nights</li>
+                            <li>Adventure sports</li>
+                        </ul>
+                        <div class="package-price">
+                            ₹18,999 <span>per person</span>
+                        </div>
+                        <button class="book-btn">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="package-card">
+                    <div class="package-image">
+                        <i class="fa fa-gopuram"></i>
+                    </div>
+                    <div class="package-content">
+                        <h3 class="package-title">Rajasthan Royal Tour</h3>
+                        <p class="package-duration">7 Days / 6 Nights</p>
+                        <ul class="package-features">
+                            <li>Heritage hotel stays</li>
+                            <li>Daily breakfast & dinner</li>
+                            <li>Palace tours</li>
+                            <li>Camel safari</li>
+                            <li>Cultural shows</li>
+                        </ul>
+                        <div class="package-price">
+                            ₹25,999 <span>per person</span>
+                        </div>
+                        <button class="book-btn">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="package-card">
+                    <div class="package-image">
+                        <i class="fa fa-ship"></i>
+                    </div>
+                    <div class="package-content">
+                        <h3 class="package-title">Kerala Backwaters</h3>
+                        <p class="package-duration">4 Days / 3 Nights</p>
+                        <ul class="package-features">
+                            <li>Houseboat stay</li>
+                            <li>All meals included</li>
+                            <li>Ayurvedic massage</li>
+                            <li>Kathakali show</li>
+                            <li>Tea garden visit</li>
+                        </ul>
+                        <div class="package-price">
+                            ₹22,999 <span>per person</span>
+                        </div>
+                        <button class="book-btn">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="package-card">
+                    <div class="package-image">
+                        <i class="fa fa-torii-gate"></i>
+                    </div>
+                    <div class="package-content">
+                        <h3 class="package-title">Bali Getaway</h3>
+                        <p class="package-duration">6 Days / 5 Nights</p>
+                        <ul class="package-features">
+                            <li>Beach villa accommodation</li>
+                            <li>Daily breakfast</li>
+                            <li>Temple tours</li>
+                            <li>Water sports</li>
+                            <li>Spa treatment</li>
+                        </ul>
+                        <div class="package-price">
+                            ₹45,999 <span>per person</span>
+                        </div>
+                        <button class="book-btn">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="package-card">
+                    <div class="package-image">
+                        <i class="fa fa-city"></i>
+                    </div>
+                    <div class="package-content">
+                        <h3 class="package-title">Dubai Luxury</h3>
+                        <p class="package-duration">5 Days / 4 Nights</p>
+                        <ul class="package-features">
+                            <li>5-star hotel stay</li>
+                            <li>Daily breakfast</li>
+                            <li>Desert safari</li>
+                            <li>Burj Khalifa visit</li>
+                            <li>Shopping tour</li>
+                        </ul>
+                        <div class="package-price">
+                            ₹55,999 <span>per person</span>
+                        </div>
+                        <button class="book-btn">Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
