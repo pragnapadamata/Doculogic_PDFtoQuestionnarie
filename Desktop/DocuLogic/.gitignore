@@ -1,4 +1,4 @@
-# Ignore parent directories and system files
+# Ignore everything outside DocuLogic directory
 ../
 ../../
 # Ignore common system files
@@ -23,7 +23,7 @@ __pycache__/
 # Ignore data files
 *.ipynb
 dataset/
-# Ignore other user directories
+# Ignore other user directories and system files
 AppData/
 Desktop/
 Documents/
@@ -31,3 +31,8 @@ Downloads/
 OneDrive/
 Pictures/
 Videos/
+# Ignore devops and programming directories
+devops/
+programming/
+# Ignore hidden system directories
+.*
