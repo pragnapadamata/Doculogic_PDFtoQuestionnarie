@@ -47,6 +47,14 @@ The application follows a microservices architecture, with each service handling
 6. **Caching and Status Management**: Redis is used to cache document processing status and manage inter-service communication.
 7. **Logging and Monitoring**: ELK Stack is used for logging, with optional Prometheus and Grafana for application performance monitoring.
 
+
+## 🏗️ Architecture
+
+<p align="center">
+  <img src="architecture.jpeg" alt="System Architecture" width="100%" />
+</p>
+
+
 ## Deployment
 
 All services are containerized with Docker and managed with Kubernetes. The deployment supports scaling, load balancing, and high availability. Kubernetes manifests or Helm charts are provided to ease the deployment process on any Kubernetes platform (e.g., Minikube for local, AWS EKS for cloud).
