@@ -19,7 +19,7 @@ This project is a full-stack, microservices-based application designed to secure
 ## 🏗️ Architecture
 
 <p align="center">
-  <img src="architecture.png" alt="System Architecture" width="100%" />
+  <img src="architecture.jpeg" alt="System Architecture" width="100%" />
 </p>
 
 ## Technology Stack
