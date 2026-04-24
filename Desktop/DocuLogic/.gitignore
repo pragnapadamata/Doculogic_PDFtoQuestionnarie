@@ -1,0 +1,33 @@
+# Ignore parent directories and system files
+../
+../../
+# Ignore common system files
+.DS_Store
+Thumbs.db
+*.lnk
+*.exe
+# Ignore IDE and editor files
+.vs/
+.vscode/
+.cursor/
+.cursor-sandbox/
+.windsurf/
+# Ignore Python cache and environment files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+.conda/
+.anaconda/
+# Ignore data files
+*.ipynb
+dataset/
+# Ignore other user directories
+AppData/
+Desktop/
+Documents/
+Downloads/
+OneDrive/
+Pictures/
+Videos/
