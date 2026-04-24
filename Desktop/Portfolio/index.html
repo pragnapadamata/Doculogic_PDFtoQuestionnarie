@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Padamata Pragna Sri Lalitha - Portfolio</title>
+    <meta name="description" content="Padamata Pragna Sri Lalitha portfolio website." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="#home" class="brand">Pragna Sri Lalitha</a>
+        <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">
+          <i class="ri-menu-line"></i>
+        </button>
+        <nav id="mainNav">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#education">Education</a>
+          <a href="#activities">Co-Curricular</a>
+          <a href="#workshops">Workshops</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <button class="theme-btn" aria-label="Theme button">
+          <i class="ri-moon-clear-line"></i>
+        </button>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="section hero-wrap" id="about">
+        <div class="container">
+          <article class="hero-card">
+            <img
+              class="avatar"
+              src="https://i.pravatar.cc/220?img=5"
+              alt="Padamata Pragna Sri Lalitha"
+              loading="lazy"
+            />
+            <h1>PADAMATA PRAGNA SRI LALITHA</h1>
+            <div class="hero-meta">
+              <p class="typing">~&nbsp;CSE Student | AI/ML</p>
+              <p class="location"><i class="ri-map-pin-line"></i> Telangana, India</p>
+            </div>
+            <p class="lead">
+              B.Tech Computer Science student focused on AI, NLP, and full-stack engineering. I build
+              practical systems with LLMs, RAG pipelines, and modern web technologies across healthcare,
+              document intelligence, and computer vision use cases.
+            </p>
+            <div class="hero-actions">
+              <a class="btn light" href="#projects">See Projects</a>
+              <a class="btn dark" href="#contact">Get In Touch</a>
+            </div>
+            <div class="socials">
+              <a href="mailto:pragnasrilalithapadamata@gmail.com" aria-label="Email"><i class="ri-mail-fill"></i></a>
+              <a href="https://www.linkedin.com/in/pragna-sri-lalitha-padamata-aa9106259" aria-label="LinkedIn"><i class="ri-linkedin-box-fill"></i></a>
+              <a href="https://github.com/pragnapadamata" aria-label="Github"><i class="ri-github-fill"></i></a>
+              <a href="tel:+919848564296" aria-label="Phone"><i class="ri-phone-fill"></i></a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="skills" class="section with-top-border">
+        <div class="container narrow">
+          <h2>Skills</h2>
+          <p class="subtitle">Technical Skills</p>
+          <div class="skills-grid">
+            <article class="skill-card"><i class="devicon-java-plain"></i><span>Java</span></article>
+            <article class="skill-card"><i class="devicon-python-plain"></i><span>Python</span></article>
+            <article class="skill-card"><i class="devicon-mysql-plain"></i><span>SQL</span></article>
+            <article class="skill-card"><i class="ri-brain-line"></i><span>LLMs</span></article>
+            <article class="skill-card"><i class="ri-search-eye-line"></i><span>RAG</span></article>
+            <article class="skill-card"><i class="ri-robot-2-line"></i><span>HuggingFace</span></article>
+            <article class="skill-card"><i class="ri-file-chart-line"></i><span>Sentence Tf.</span></article>
+            <article class="skill-card"><i class="devicon-flask-original"></i><span>Flask</span></article>
+            <article class="skill-card"><i class="devicon-spring-plain"></i><span>Spring Boot</span></article>
+            <article class="skill-card"><i class="devicon-react-original"></i><span>React</span></article>
+            <article class="skill-card"><i class="ri-database-2-line"></i><span>FAISS</span></article>
+            <article class="skill-card"><i class="ri-search-line"></i><span>Elasticsearch</span></article>
+            <article class="skill-card"><i class="devicon-amazonwebservices-original"></i><span>AWS S3</span></article>
+            <article class="skill-card"><i class="devicon-kubernetes-plain"></i><span>Kubernetes</span></article>
+            <article class="skill-card"><i class="devicon-git-plain"></i><span>Git</span></article>
+            <article class="skill-card"><i class="ri-git-branch-line"></i><span>DSA</span></article>
+            <article class="skill-card"><i class="ri-node-tree"></i><span>OOP</span></article>
+            <article class="skill-card"><i class="ri-server-line"></i><span>DBMS</span></article>
+            <article class="skill-card"><i class="ri-global-line"></i><span>CN</span></article>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="container narrow">
+          <h2>Projects</h2>
+          <p class="subtitle">Selected AI and Full-Stack Projects</p>
+          <div class="list-card">
+            <article class="row-item">
+              <div>
+                <h3>DocuLogic: Document Query System</h3>
+                <p>React, Flask, AWS S3, Elasticsearch, Kubernetes | RAG + Claude</p>
+              </div>
+              <span>Mar 2026</span>
+            </article>
+            <article class="row-item">
+              <div>
+                <h3>MediNova: AI-Powered Medical Chatbot</h3>
+                <p>Python, Flask, FAISS, Ollama, OCR | ~88% extraction accuracy</p>
+              </div>
+              <span>Jun 2025</span>
+            </article>
+            <article class="row-item">
+              <div>
+                <h3>FitSyncAI: Posture and Nutrition Tracker</h3>
+                <p>Python, OpenCV, TensorFlow | ~90% posture classification accuracy</p>
+              </div>
+              <span>Feb 2025</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="education" class="section">
+        <div class="container narrow">
+          <h2>Education</h2>
+          <p class="subtitle">My academic background and qualifications</p>
+          <div class="list-card">
+            <article class="row-item">
+              <div><h3>B.Tech in CSE - BVRIT Hyderabad College of Engineering for Women</h3><p>CGPA: 7.44/10</p></div>
+              <span>2022 - 2026 <i class="ri-arrow-down-s-line"></i></span>
+            </article>
+            <article class="row-item">
+              <div><h3>Intermediate (MPC) - Sri Chaitanya Junior College</h3><p>Percentage: 95%</p></div>
+              <span>2020 - 2022 <i class="ri-arrow-down-s-line"></i></span>
+            </article>
+            <article class="row-item">
+              <div><h3>SSC - Bhashyam High School</h3><p>CGPA: 10/10</p></div>
+              <span>2019 - 2020 <i class="ri-arrow-down-s-line"></i></span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="activities" class="section">
+        <div class="container narrow">
+          <h2>Co-Curricular Activities</h2>
+          <p class="subtitle">Achievements and Certifications</p>
+          <div class="list-card">
+            <article class="row-item">
+              <div><h3>Amazon ML Challenge 2025</h3><p>Built multimodal NLP/CV models; achieved SMAPE score of 51 under limited GPU constraints.</p></div>
+            </article>
+            <article class="row-item">
+              <div><h3>Google Chrome Built-in AI Challenge 2025</h3><p>Proposed Mirathym Extension concept to estimate CO2 emissions per prompt.</p></div>
+            </article>
+            <article class="row-item">
+              <div><h3>Patent Filed - AI Powered Medical Chatbot</h3><p>Co-inventor; Application No: 202541046049 A (May 2025).</p></div>
+            </article>
+            <article class="row-item">
+              <div><h3>AICTE Certification</h3><p>Full Stack Development in Java (Spring Boot, React, MySQL, Web Applications).</p></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="workshops" class="section">
+        <div class="container narrow">
+          <h2>Workshops</h2>
+          <p class="subtitle">Hands-on learning and collaboration</p>
+          <div class="list-card">
+            <article class="row-item">
+              <div>
+                <h3>Summer of AI Internship at Swecha</h3>
+                <p>Contributed to three LLM pipelines including Telugu LLM and TTS; improved dataset preparation efficiency by 20%. Collaborated with teams from IIIT Hyderabad, Ozonetel, and TASK.</p>
+              </div>
+              <span>Mar 2024</span>
+            </article>
+            <article class="row-item">
+              <div>
+                <h3>NASSCOM AI/ML Workshop</h3>
+                <p>Completed five applied ML projects covering model training, evaluation, deployment, and workflow design.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="container narrow">
+          <h2>Contact</h2>
+          <p class="subtitle">pragnasrilalithapadamata@gmail.com | +91-9848564296</p>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
