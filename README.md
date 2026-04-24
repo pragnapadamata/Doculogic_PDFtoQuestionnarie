@@ -95,6 +95,12 @@ To set up and run this application, ensure you have the following installed:
 2. **Upload Documents**: Upload files in the supported formats (PDF, PPT, CSV, etc.) via the frontend.
 3. **Query Documents**: Enter queries in natural language, and the application will fetch context-aware answers based on the document content.
 
+## 💬 Chatbot Interface
+
+<p align="center">
+  <img src="chatbot_interface.png" alt="Chatbot UI" width="70%" />
+</p>
+
 ## Contributing
 
 Contributions are welcome! Please open an issue or submit a pull request for any improvements, bug fixes, or feature suggestions.
