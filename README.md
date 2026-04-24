@@ -16,6 +16,12 @@ This project is a full-stack, microservices-based application designed to secure
 - **Caching and Status Management**: Redis is used for caching document statuses and managing service health.
 - **Logging and Monitoring**: Integrates with the ELK Stack (Elasticsearch, Logstash, Kibana) for centralized logging and supports Prometheus and Grafana for real-time monitoring.
 
+## 🏗️ Architecture
+
+<p align="center">
+  <img src="architecture.png" alt="System Architecture" width="100%" />
+</p>
+
 ## Technology Stack
 
 - **Frontend**: React 18.2.0 with TypeScript
