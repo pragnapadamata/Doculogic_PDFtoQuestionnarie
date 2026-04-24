@@ -100,7 +100,7 @@ To set up and run this application, ensure you have the following installed:
 ## 💬 Chatbot Interface
 
 <p align="center">
-  <img src="chatbot_interface.jpeg" alt="Chatbot UI" width="70%" />
+  <img src="chatbot_interface.png" alt="Chatbot UI" width="70%" />
 </p>
 
 ## Contributing
